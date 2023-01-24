@@ -249,6 +249,26 @@ export default function App() {
 
 ## ENV variables
 
+1. npm i react-native-dotenv
+2. Add the `["module:react-native-dotenv"]` to list of `plugins` in your `babel.config.js`.
+
+```javascript
+// babel.config.js
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: ["babel-preset-expo"],
+    plugins: ["nativewind/babel", ["module:react-native-dotenv"]],
+  };
+};
+```
+
+3. Clear the cache and start your project
+
+```bash
+expo r -c
+```
+
 ## Expo Location and Geocoding
 
 ## React native MapView
